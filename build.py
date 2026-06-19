@@ -421,7 +421,7 @@ def render_markdown_to_page(
 ) -> str:
     """Convert a markdown string into a full standalone HTML page."""
     body_html, nav, headline = build_body(md)
-    nav_html = "".join(f'<a class="jump" href="#{a}">{esc(t)}</a>' for a, t in nav)
+    nav_html = ""  # section jump-links removed
     headline_html = (
         f'All-time {esc(headline["total"])}' if headline.get("total") else ""
     )
