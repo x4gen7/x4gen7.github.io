@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor and local workspace files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Dependency/build caches, if tooling is added later
+node_modules/
+.cache/
+.parcel-cache/
+.sass-cache/
+__pycache__/
+*.py[cod]
