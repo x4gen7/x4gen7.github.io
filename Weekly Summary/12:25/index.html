@@ -62,6 +62,19 @@
   .trend.up{color:var(--green)}.trend.down{color:var(--red)}.trend.flat{color:var(--dim)}
   .wk-foot{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);
     margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+  /* expandable week -> daily stats */
+  details.wk summary{cursor:pointer;list-style:none}
+  details.wk summary::-webkit-details-marker{display:none}
+  .wk-open{font-size:11px;color:var(--accent);margin-top:8px}
+  .wk-open::before{content:"▸ "}
+  details.wk[open] .wk-open::before{content:"▾ "}
+  .wk-days{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);
+    display:flex;flex-direction:column;gap:8px}
+  .wd{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+  .wd-head{display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
+  .wd-head b{font-weight:700}
+  .wd-none{color:var(--dim);font-style:italic}
+  .wd .catline{font-size:11px;padding:1px 0}
   /* generic kv + chart */
   .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:4px 18px}
   .kvrow{display:flex;justify-content:space-between;gap:10px;font-size:13px;
@@ -86,7 +99,7 @@
   <span class="headline"></span>
 </nav>
 <div class="wrap">
-<section id="sec0"><h2>📅 Weekly Progress</h2><div class="wk-grid"><div class="wk">
+<section id="sec0"><h2>📅 Weekly Progress</h2><div class="wk-grid"><details class="wk"><summary>
               <div class="wk-top"><b>Week-1</b><span class="pct">53%</span></div>
               <div class="wk-range">2025-12-06 -&gt; 2025-12-11</div>
               <span class="track"><span class="fill" style="width:53%"></span></span>
@@ -95,8 +108,7 @@
                 <span class="trend flat">→ Starting point</span>
                 <span>Below target by 11h 14m</span>
               </div>
-              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div>
-            </div><div class="wk">
+              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd"><div class="wd-head"><span>Sat 12-06</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Sun 12-07</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Mon 12-08</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Tue 12-09</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Wed 12-10</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Thu 12-11</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Fri 12-12</span><span class="wd-none">no log</span></div></div></div></details><details class="wk"><summary>
               <div class="wk-top"><b>Week-2</b><span class="pct">75%</span></div>
               <div class="wk-range">2025-12-12 -&gt; 2025-12-18</div>
               <span class="track"><span class="fill" style="width:75%"></span></span>
@@ -105,8 +117,7 @@
                 <span class="trend up">↑ Up 5h 19m from last week</span>
                 <span>Below target by 5h 55m</span>
               </div>
-              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div>
-            </div><div class="wk">
+              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd"><div class="wd-head"><span>Fri 12-12</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Sat 12-13</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Sun 12-14</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Mon 12-15</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Tue 12-16</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Wed 12-17</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Thu 12-18</span><span class="wd-none">no log</span></div></div></div></details><details class="wk"><summary>
               <div class="wk-top"><b>Week-3</b><span class="pct">65%</span></div>
               <div class="wk-range">2025-12-20 -&gt; 2025-12-24</div>
               <span class="track"><span class="fill" style="width:65%"></span></span>
@@ -115,8 +126,23 @@
                 <span class="trend down">↓ Down 2h 31m from last week</span>
                 <span>Below target by 8h 26m</span>
               </div>
-              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div>
-            </div><div class="wk">
+              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd">
+              <div class="wd-head"><span>Sat 12-20</span>
+              <b style="color:var(--dark)">4h 30m</b></div>
+              <div class="catline"><span>TryHackMe</span><b>2h 15m</b></div><div class="catline"><span>HackTheBox</span><b>2h 15m</b></div>
+            </div><div class="wd"><div class="wd-head"><span>Sun 12-21</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Mon 12-22</span><span class="wd-none">no log</span></div></div><div class="wd">
+              <div class="wd-head"><span>Tue 12-23</span>
+              <b style="color:#34be71">2h 45m</b></div>
+              <div class="catline"><span>TryHackMe</span><b>2h 15m</b></div><div class="catline"><span>TCM-Security</span><b>0h 30m</b></div>
+            </div><div class="wd">
+              <div class="wd-head"><span>Wed 12-24</span>
+              <b style="color:#87aa75">1h 19m</b></div>
+              <div class="catline"><span>TryHackMe</span><b>0h 45m</b></div><div class="catline"><span>CTF</span><b>0h 34m</b></div>
+            </div><div class="wd"><div class="wd-head"><span>Thu 12-25</span><span class="wd-none">no log</span></div></div><div class="wd">
+              <div class="wd-head"><span>Fri 12-26</span>
+              <b style="color:var(--dark)">4h 30m</b></div>
+              <div class="catline"><span>TryHackMe</span><b>3h 00m</b></div><div class="catline"><span>HackTheBox</span><b>1h 30m</b></div>
+            </div></div></details><details class="wk"><summary>
               <div class="wk-top"><b>Week-4</b><span class="pct">129%</span></div>
               <div class="wk-range">2025-12-26 -&gt; 2026-01-01</div>
               <span class="track"><span class="fill ok" style="width:100%"></span></span>
@@ -125,8 +151,31 @@
                 <span class="trend up">↑ Up 15h 22m from last week</span>
                 <span>Above target by 6h 56m</span>
               </div>
-              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div>
-            </div></div></section>
+              <div class="wk-foot"><span>Top: TryHackMe</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd">
+              <div class="wd-head"><span>Fri 12-26</span>
+              <b style="color:var(--dark)">4h 30m</b></div>
+              <div class="catline"><span>TryHackMe</span><b>3h 00m</b></div><div class="catline"><span>HackTheBox</span><b>1h 30m</b></div>
+            </div><div class="wd">
+              <div class="wd-head"><span>Sat 12-27</span>
+              <b style="color:#289658">3h 24m</b></div>
+              <div class="catline"><span>TryHackMe</span><b>1h 52m</b></div><div class="catline"><span>CTF</span><b>0h 49m</b></div><div class="catline"><span>HackTheBox</span><b>0h 43m</b></div>
+            </div><div class="wd">
+              <div class="wd-head"><span>Sun 12-28</span>
+              <b style="color:var(--dark)">5h 15m</b></div>
+              <div class="catline"><span>HackTheBox</span><b>2h 51m</b></div><div class="catline"><span>TryHackMe</span><b>2h 00m</b></div><div class="catline"><span>CTF</span><b>0h 24m</b></div>
+            </div><div class="wd">
+              <div class="wd-head"><span>Mon 12-29</span>
+              <b style="color:var(--dark)">5h 15m</b></div>
+              <div class="catline"><span>TryHackMe</span><b>3h 00m</b></div><div class="catline"><span>HackTheBox</span><b>1h 45m</b></div><div class="catline"><span>TCM-Security</span><b>0h 30m</b></div>
+            </div><div class="wd"><div class="wd-head"><span>Tue 12-30</span><span class="wd-none">no log</span></div></div><div class="wd">
+              <div class="wd-head"><span>Wed 12-31</span>
+              <b style="color:#22814a">3h 45m</b></div>
+              <div class="catline"><span>CTF</span><b>2h 15m</b></div><div class="catline"><span>HackTheBox</span><b>1h 30m</b></div>
+            </div><div class="wd">
+              <div class="wd-head"><span>Thu 01-01</span>
+              <b style="color:var(--dark)">5h 47m</b></div>
+              <div class="catline"><span>HackTheBox</span><b>2h 15m</b></div><div class="catline"><span>TryHackMe</span><b>1h 30m</b></div><div class="catline"><span>Book</span><b>1h 17m</b></div><div class="catline"><span>CTF</span><b>0h 45m</b></div>
+            </div></div></details></div></section>
 <section id="sec1"><h2>📈 Weekly Insights</h2><div class="kv">
 <div class="kvrow"><span>Span</span><b>2025-12-06 -&gt; 2026-01-01 (Friday -&gt; Thursday)</b></div>
 <div class="kvrow"><span>Best week</span><b>2025-12-26 -&gt; 2026-01-01 at 30h 56m</b></div>
