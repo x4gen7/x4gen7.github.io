@@ -88,6 +88,23 @@
   .chval{text-align:right;font-variant-numeric:tabular-nums}
   p{margin:6px 0}
   .meta{color:var(--dim);font-size:12px;text-align:center;margin-top:30px}
+  /* year heatmap */
+  .hm-stats{margin-bottom:14px}
+  .hm{display:flex;gap:6px;align-items:flex-start}
+  .hm-days,.hm-grid{display:grid;grid-template-rows:16px repeat(7,13px);gap:3px}
+  .hm-days span{font-size:10px;line-height:13px;color:var(--dim)}
+  .hm-scroll{overflow-x:auto;display:flex;flex-direction:row-reverse;padding-bottom:6px;min-width:0}
+  .hm-grid{grid-auto-flow:column;grid-auto-columns:13px;flex:none}
+  .hm-grid .m{font-size:10px;line-height:16px;color:var(--dim);white-space:nowrap;overflow:visible}
+  .c{display:block;width:13px;height:13px;border-radius:3px}
+  .c.none{background:#1b222c}
+  .c.off{background:transparent;box-shadow:inset 0 0 0 1.5px #566270}
+  .c.l1{background:#205c40}.c.l2{background:#2a8857}.c.l3{background:#34b46f}.c.l4{background:#3ddc84}
+  .c.pad{visibility:hidden}
+  .c.today{outline:1.5px solid var(--accent);outline-offset:1px}
+  .hm-grid .c:not(.pad):hover{outline:1.5px solid var(--text);outline-offset:1px}
+  .hm-legend{display:flex;align-items:center;gap:4px;flex-wrap:wrap;font-size:11px;color:var(--dim);margin-top:10px}
+  .hm-legend span{margin:0 2px}.hm-legend .gap{width:14px}
   @media(max-width:560px){.chrow{grid-template-columns:120px 1fr 64px}}
 </style>
 </head>
@@ -174,7 +191,15 @@
               <div class="wd-head"><span>Sat 12-20</span>
               <b style="color:var(--dark)">4h 30m</b></div>
               <div class="catline"><span>TryHackMe</span><b>2h 15m</b></div><div class="catline"><span>HackTheBox</span><b>2h 15m</b></div>
-            </div><div class="wd"><div class="wd-head"><span>Sun 12-21</span><span class="wd-none">no log</span></div></div><div class="wd"><div class="wd-head"><span>Mon 12-22</span><span class="wd-none">no log</span></div></div><div class="wd">
+            </div><div class="wd">
+              <div class="wd-head"><span>Sun 12-21</span>
+              <b style="color:var(--dark)">4h 45m</b></div>
+              <div class="catline"><span>HackTheBox</span><b>1h 34m</b></div><div class="catline"><span>TryHackMe</span><b>1h 26m</b></div><div class="catline"><span>TCM-Security</span><b>1h 00m</b></div><div class="catline"><span>Book - Computer Networking: A Top-Down Approach</span><b>0h 45m</b></div>
+            </div><div class="wd">
+              <div class="wd-head"><span>Mon 12-22</span>
+              <b style="color:#3ddc84">2h 15m</b></div>
+              <div class="catline"><span>CTF</span><b>1h 53m</b></div><div class="catline"><span>Book - Computer Networking: A Top-Down Approach</span><b>0h 22m</b></div>
+            </div><div class="wd">
               <div class="wd-head"><span>Tue 12-23</span>
               <b style="color:#34be71">2h 45m</b></div>
               <div class="catline"><span>TryHackMe</span><b>2h 15m</b></div><div class="catline"><span>TCM-Security</span><b>0h 30m</b></div>
