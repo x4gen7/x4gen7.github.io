@@ -30,7 +30,6 @@
   .targetbar{margin-bottom:12px}
   .chip{display:inline-block;font-size:12px;color:var(--dim);background:var(--panel);
     border:1px solid var(--border);border-radius:999px;padding:4px 12px}
-  /* day grid */
   .day-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
   .day{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px}
   .day-head{font-size:12px;color:var(--dim);margin-bottom:6px}
@@ -40,18 +39,15 @@
   .cats{margin-top:10px}
   .catline{display:flex;justify-content:space-between;font-size:12px;color:var(--dim);padding:2px 0}
   .catline b{color:var(--text);font-weight:600}
-  /* progress track */
   .track{display:block;height:6px;background:var(--track);border-radius:6px;overflow:hidden;margin:8px 0}
   .track .fill{display:block;height:100%;background:var(--accent);border-radius:6px}
   .track .fill.ok{background:var(--green)}
-  /* daily summary strip */
   .sumrow{display:flex;gap:8px;flex-wrap:wrap}
   .sumcell{background:var(--panel);border:1px solid var(--border);border-radius:10px;
     padding:10px 14px;text-align:center;min-width:84px}
   .sumcell .dot{width:100%;height:6px;border-radius:4px;margin-bottom:8px}
   .sumcell .sd{font-size:12px;color:var(--dim)}
   .sumcell .sh{font-weight:700;font-size:15px}
-  /* weekly cards */
   .wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
   .wk{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px}
   .wk-top{display:flex;justify-content:space-between;align-items:baseline}
@@ -62,7 +58,6 @@
   .trend.up{color:var(--green)}.trend.down{color:var(--red)}.trend.flat{color:var(--dim)}
   .wk-foot{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);
     margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
-  /* expandable week -> daily stats */
   details.wk summary{cursor:pointer;list-style:none}
   details.wk summary::-webkit-details-marker{display:none}
   .wk-open{font-size:11px;color:var(--accent);margin-top:8px}
@@ -75,7 +70,6 @@
   .wd-head b{font-weight:700}
   .wd-none{color:var(--dim);font-style:italic}
   .wd .catline{font-size:11px;padding:1px 0}
-  /* generic kv + chart */
   .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:4px 18px}
   .kvrow{display:flex;justify-content:space-between;gap:10px;font-size:13px;
     padding:5px 0;border-bottom:1px solid var(--border)}
@@ -88,7 +82,6 @@
   .chval{text-align:right;font-variant-numeric:tabular-nums}
   p{margin:6px 0}
   .meta{color:var(--dim);font-size:12px;text-align:center;margin-top:30px}
-  /* year heatmap */
   .hm-stats{margin-bottom:14px}
   .hm{display:flex;gap:6px;align-items:flex-start}
   .hm-days,.hm-grid{display:grid;grid-template-rows:16px repeat(7,14px);gap:3px}
@@ -101,7 +94,6 @@
   .c.off{background:#314154}
   .c.none{background:transparent;box-shadow:inset 0 0 0 1px #314154}
   .c.l1{background:#9be9a8}
-  .c.held{background:#9be9a8}.c.held::after{content:"\2022";color:#04180c}
   .c.l2{background:#00e600}.c.l2::after{content:"\2713";color:#04180c}
   .c.l3{background:#008000}.c.l3::after{content:"\2713";color:#fff}
   .c.pad{visibility:hidden}
@@ -129,11 +121,7 @@
                 <span class="trend flat">→ Starting point</span>
                 <span>Above target by 0h 10m</span>
               </div>
-              <div class="wk-foot"><span>Top: General InfoSec</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd">
-              <div class="wd-head"><span>Fri 09-11</span>
-              <b style="color:#ef6461">0h 00m</b></div>
-              
-            </div><div class="wd">
+              <div class="wk-foot"><span>Top: General InfoSec</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd"><div class="wd-head"><span>Fri 09-11</span><span class="wd-none">studied</span></div></div><div class="wd">
               <div class="wd-head"><span>Sat 09-12</span>
               <b style="color:#6bbd7b">1h 40m</b></div>
               <div class="catline"><span>CTF</span><b>0h 43m</b></div><div class="catline"><span>TryHackMe</span><b>0h 35m</b></div><div class="catline"><span>General InfoSec</span><b>0h 22m</b></div>
@@ -166,11 +154,7 @@
                 <span class="trend down">↓ Down 0h 07m from last week</span>
                 <span>Above target by 0h 03m</span>
               </div>
-              <div class="wk-foot"><span>Top: CTF</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd">
-              <div class="wd-head"><span>Fri 09-18</span>
-              <b style="color:#ef6461">0h 00m</b></div>
-              
-            </div><div class="wd">
+              <div class="wk-foot"><span>Top: CTF</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd"><div class="wd-head"><span>Fri 09-18</span><span class="wd-none">studied</span></div></div><div class="wd">
               <div class="wd-head"><span>Sat 09-19</span>
               <b style="color:#95a073">1h 08m</b></div>
               <div class="catline"><span>General InfoSec</span><b>0h 32m</b></div><div class="catline"><span>CTF</span><b>0h 26m</b></div><div class="catline"><span>TryHackMe</span><b>0h 10m</b></div>
@@ -240,15 +224,7 @@
                 <span class="trend down">↓ Down 4h 30m from last week</span>
                 <span>Below target by 4h 30m</span>
               </div>
-              <div class="wk-foot"><span>Top: CTF</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd">
-              <div class="wd-head"><span>Fri 10-02</span>
-              <b style="color:#ef6461">0h 00m</b></div>
-              
-            </div><div class="wd">
-              <div class="wd-head"><span>Sat 10-03</span>
-              <b style="color:#ef6461">0h 00m</b></div>
-              
-            </div><div class="wd">
+              <div class="wk-foot"><span>Top: CTF</span><span>Off: 0</span></div><div class="wk-open">daily stats</div></summary><div class="wk-days"><div class="wd"><div class="wd-head"><span>Fri 10-02</span><span class="wd-none">studied</span></div></div><div class="wd"><div class="wd-head"><span>Sat 10-03</span><span class="wd-none">studied</span></div></div><div class="wd">
               <div class="wd-head"><span>Sun 10-04</span>
               <b style="color:#1d7140">4h 00m</b></div>
               <div class="catline"><span>CTF</span><b>1h 45m</b></div><div class="catline"><span>HackTheBox</span><b>1h 30m</b></div><div class="catline"><span>General InfoSec</span><b>0h 45m</b></div>
@@ -264,11 +240,7 @@
               <div class="wd-head"><span>Wed 10-07</span>
               <b style="color:#269054">3h 30m</b></div>
               <div class="catline"><span>TryHackMe</span><b>1h 38m</b></div><div class="catline"><span>CTF</span><b>1h 07m</b></div><div class="catline"><span>General InfoSec</span><b>0h 30m</b></div><div class="catline"><span>HackTheBox</span><b>0h 15m</b></div>
-            </div><div class="wd">
-              <div class="wd-head"><span>Thu 10-08</span>
-              <b style="color:#ef6461">0h 00m</b></div>
-              
-            </div></div></details></div></section>
+            </div><div class="wd"><div class="wd-head"><span>Thu 10-08</span><span class="wd-none">studied</span></div></div></div></details></div></section>
 <section id="sec1"><h2>📈 Weekly Insights</h2><div class="kv">
 <div class="kvrow"><span>Span</span><b>2026-09-11 -&gt; 2026-10-08 (Friday -&gt; Thursday)</b></div>
 <div class="kvrow"><span>Best week</span><b>2026-09-11 -&gt; 2026-09-17 at 20h 10m</b></div>
